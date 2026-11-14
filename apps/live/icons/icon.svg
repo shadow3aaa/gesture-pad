@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1d1f24"/>
+      <stop offset="1" stop-color="#0d0e10"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.36" cy="0.28" r="0.5">
+      <stop offset="0" stop-color="#f5b041" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f5b041" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="32" y="32" width="960" height="960" rx="216" fill="url(#bg)"/>
+  <rect x="32" y="32" width="960" height="960" rx="216" fill="url(#glow)"/>
+  <rect x="33.5" y="33.5" width="957" height="957" rx="214.5" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="3"/>
+  <!-- cursor drawn as a landmark skeleton -->
+  <path d="M352 236 L352 742 L470 628 L556 820 L650 778 L566 590 L732 590 Z" fill="#f5b041" fill-opacity="0.14" stroke="#f5b041" stroke-width="34" stroke-linejoin="round"/>
+  <g fill="#f5b041">
+    <circle cx="352" cy="742" r="34"/>
+    <circle cx="470" cy="628" r="30"/>
+    <circle cx="556" cy="820" r="30"/>
+    <circle cx="650" cy="778" r="30"/>
+    <circle cx="566" cy="590" r="30"/>
+    <circle cx="732" cy="590" r="34"/>
+  </g>
+  <circle cx="352" cy="236" r="58" fill="#f5b041" fill-opacity="0.25"/>
+  <circle cx="352" cy="236" r="40" fill="#fff4dc"/>
+</svg>

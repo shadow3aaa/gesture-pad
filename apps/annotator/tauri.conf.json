@@ -1,0 +1,18 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Gesture Annotator",
+  "mainBinaryName": "gesture-annotator",
+  "version": "0.1.0",
+  "identifier": "dev.gesturepad.annotator",
+  "build": {
+    "beforeDevCommand": {"script": "bun run dev:annotator", "cwd": "../.."},
+    "devUrl": "http://127.0.0.1:1420",
+    "beforeBuildCommand": {"script": "bun run build:annotator", "cwd": "../.."},
+    "frontendDist": "../../dist/annotator"
+  },
+  "app": {
+    "windows": [{"label": "main", "title": "Gesture Annotator", "width": 1280, "height": 860, "minWidth": 900, "minHeight": 600, "backgroundColor": "#ffffff"}],
+    "security": {"csp": "default-src 'self'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; media-src 'self' blob:; connect-src ipc: http://ipc.localhost 'self'; worker-src 'self' blob:"}
+  },
+  "bundle": {"active": false, "icon": ["icons/icon.png", "icons/icon.ico"]}
+}

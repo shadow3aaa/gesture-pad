@@ -1,0 +1,10 @@
+import { mkdir, copyFile, readdir, writeFile } from 'node:fs/promises';
+import { join } from 'node:path';
+const directory = new URL('../public/mediapipe/', import.meta.url);
+await mkdir(new URL('wasm/', directory), { recursive: true });
+const wasm = 'node_modules/@mediapipe/tasks-vision/wasm';
+for (const name of await readdir(wasm)) await copyFile(join(wasm,name), new URL(`wasm/${name}`,directory));
+const response = await fetch('https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task');
+if (!response.ok) throw new Error(`Model download failed: ${response.status}`);
+await writeFile(new URL('hand_landmarker.task',directory),new Uint8Array(await response.arrayBuffer()));
+console.log('MediaPipe runtime and model installed locally. Runtime camera processing needs no network.');

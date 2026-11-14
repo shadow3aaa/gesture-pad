@@ -1,0 +1,8 @@
+{
+  "classes": 4,
+  "window": 16,
+  "kernel": 5,
+  "width": 48,
+  "layers": 3,
+  "dropout": 0.2
+}

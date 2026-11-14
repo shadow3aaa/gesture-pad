@@ -1,0 +1,12 @@
+/target/
+/node_modules/
+/dist/
+# Recorded sessions are personal; only the trained model is shared.
+/data/*
+!/data/model/
+/models/
+/work/
+.env
+*.log
+/public/mediapipe/
+/apps/*/gen/
